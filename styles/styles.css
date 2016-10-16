@@ -1,0 +1,143 @@
+/*Sanskrit*/
+@import url('https://fonts.googleapis.com/css?family=Vesper+Libre');
+
+/*Tamil*/
+@import url('https://fonts.googleapis.com/css?family=Arima+Madurai:400,700&subset=tamil');
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: #FFF3E0;
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  background: #FF9800;
+}
+
+header h1 {
+  margin-top: 15px;
+  margin-left: 20px;
+  color: #FFF3E0;
+}
+
+main {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 90%;
+
+}
+
+section.controllers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+}
+section.controllers nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background: #FFD180;
+  margin: 5px;
+}
+
+nav .tool {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.optScript {
+  position: relative;
+  left: 50%;
+}
+.select-style {
+    padding: 0;
+    margin: 0 10px;
+    border: 1px solid #ccc;
+    width: 120px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.select-style select {
+    padding: 5px 8px;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    font-size: 15px;
+}
+
+.select-style select:focus {
+    outline: none;
+}
+
+section.processors {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+  margin-top: 5px;
+}
+
+textarea.textIn , textarea.textOut{
+  height: 100%;
+  width: 95%;
+  margin: 5px;
+  box-shadow: inset 0 0 10px #000000;
+  resize: none;
+  padding: 10px;
+  font-size: 14pt;
+  border-radius: 10px;
+}
+
+.translitMap {
+  width: 100%;
+  height: 25%;
+  margin-top: 10px;
+  background: #FFCA28;
+}
+
+.translitMap table {
+  border-collapse: collapse;
+  margin: 10px auto;
+  width: 90%;
+  font-family: 'Vesper Libre', serif;
+}
+
+.translitMap table,
+.translitMap table tr,
+.translitMap table td
+{ border: solid thin;}
+
+.translitMap table td {
+  vertical-align: center;
+  text-align: center; 
+}

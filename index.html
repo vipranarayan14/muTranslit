@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles/styles.css" media="screen" title="no title" charset="utf-8">
+    </head>
+    <body>
+      <header>
+        <h1>Transliterator</h1>
+      </header>
+
+      <main>
+        <section class="controllers">
+        <nav class="toolBar">
+          <div class="tool optScript">
+          <label for="optScript">Output Script</label>
+          <div class="select-style">
+            <select id="optScript">
+              <option value="select" selected="selected">Select</option>
+              <option value="devanagari">Devanagari</option>
+              <option value="tamil">Tamil</option>
+            </select>
+          </div>
+        </div>
+        </nav>
+        </section>
+
+        <section class="processors">
+          <textarea id="textIn" class="textIn" placeholder="Type something in Itrans"></textarea>
+          <textarea id="textOut" class="textOut" placeholder="Output will be here..." readonly="true"></textarea>
+        </section>
+
+        <section id="translitMap" class="translitMap">
+        </section>
+        
+      </main>
+
+
+      <script src="scripts/sanscript.js"></script>
+      <script src="scripts/script.js"></script>
+    </body>
+</html>
