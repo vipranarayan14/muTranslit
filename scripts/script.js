@@ -80,8 +80,7 @@ function generateTranslitMap(toScript) {
       break;
 
     case "select":
-
-      translitMap.innerText = "Please select a Script".split('');
+      translitMap.innerText = "Please select a Script";
       break;
 
     default:

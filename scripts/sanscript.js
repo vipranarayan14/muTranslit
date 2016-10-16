@@ -175,7 +175,7 @@
             vowel_marks: 'ா ி ீ ு ூ     ெ ே ை ொ ோ ௌ'.split(' '),
             other_marks: 'ஂ ஃ '.split(' '),
             virama: ['்'],
-            consonants: 'க க க க ங ச ச ஜ ச ஞ ட ட ட ட ண த த த த ந ப ப ப ப ம ய ர ல வ ஶ ஷ ஸ ஹ ள க்ஷ ஜ்ஞ ன'.split(' '),
+            consonants: 'க க க க ங ச ச ஜ ச ஞ ட ட ட ட ண த த த த ந ப ப ப ப ம ய ர ல வ ஶ ஷ ஸ ஹ ள க்ஷ ஜ்ஞ ன ழ'.split(' '),
             symbols: '௦ ௧ ௨ ௩ ௪ ௫ ௬ ௭ ௮ ௯ ௐ ऽ । ॥'.split(' '),
             other: '        ற'.split(' ')
         },
@@ -215,10 +215,10 @@
          * '_' is a "null" letter, which allows adjacent vowels.
          */
         itrans: {
-            vowels: 'a A i I u U RRi RRI LLi LLI  e ai  o au'.split(' '),
+            vowels: 'a A i I u U RRi RRI LLi LLI e E ai o O au'.split(' '),
             other_marks: ['M', 'H', '.N'],
             virama: [''],
-            consonants: 'k kh g gh ~N ch Ch j jh ~n T Th D Dh N t th d dh n p ph b bh m y r l v sh Sh s h L kSh j~n ^n'.split(' '),
+            consonants: 'k kh g gh ~N ch Ch j jh ~n T Th D Dh N t th d dh n p ph b bh m y r l v sh Sh s h L kSh j~n ^n z'.split(' '),
             symbols: '0 1 2 3 4 5 6 7 8 9 OM .a | ||'.split(' '),
             candra: ['.c'],
             zwj: ['{}'],
