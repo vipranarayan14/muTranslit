@@ -130,6 +130,7 @@ textarea.textIn , textarea.textOut{
   margin: 10px auto;
   width: 90%;
   font-family: 'Vesper Libre', serif;
+  overflow: scroll;
 }
 
 .translitMap table,
