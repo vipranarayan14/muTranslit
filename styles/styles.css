@@ -123,6 +123,7 @@ textarea.textIn , textarea.textOut{
   height: 25%;
   margin-top: 10px;
   background: #FFCA28;
+  overflow: scroll;
 }
 
 .translitMap table {
@@ -130,7 +131,6 @@ textarea.textIn , textarea.textOut{
   margin: 10px auto;
   width: 90%;
   font-family: 'Vesper Libre', serif;
-  overflow: scroll;
 }
 
 .translitMap table,
@@ -140,5 +140,5 @@ textarea.textIn , textarea.textOut{
 
 .translitMap table td {
   vertical-align: center;
-  text-align: center; 
+  text-align: center;
 }

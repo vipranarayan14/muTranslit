@@ -95,6 +95,56 @@
             other: 'क़ ख़ ग़ ज़ ड़ ढ़ फ़ य़ ऱ'.split(' ')
         },
 
+        /* Devanagari Unicode
+         * ----------
+         * The most comprehensive and unambiguous Brahmic script listed.
+         */
+        devanagariUC: {
+            // "Independent" forms of the vowels. These are used whenever the
+            // vowel does not immediately follow a consonant.
+            vowels: '\u0905 \u0906 \u0907 \u0908 \u0909 \u090A \u090B \u0960 \u090C \u0961 \u090E \u090F \u0910 \u0912 \u0913 \u0914'.split(' '),
+
+            // "Dependent" forms of the vowels. These are used whenever the
+            // vowel immediately follows a consonant. If a letter is not
+            // listed in `vowels`, it should not be listed here.
+            vowel_marks: 'ा ि ी ु ू ृ ॄ ॢ ॣ ॆ े ै ॊ ो ौ'.split(' '),
+
+            // Miscellaneous marks, all of which are used in Sanskrit.
+            other_marks: 'ं ः ँ'.split(' '),
+
+            // In syllabic scripts like Devanagari, consonants have an inherent
+            // vowel that must be suppressed explicitly. We do so by putting a
+            // virama after the consonant.
+            virama: ['्'],
+
+            // Various Sanskrit consonants and consonant clusters. Every token
+            // here has an explicit vowel. Thus "क" is "ka" instead of "k".
+            consonants: 'क ख ग घ ङ च छ ज झ ञ ट ठ ड ढ ण त थ द ध न प फ ब भ म य र ल व श ष स ह ळ क्ष ज्ञ'.split(' '),
+
+            // Numbers and punctuation
+            symbols: '० १ २ ३ ४ ५ ६ ७ ८ ९ ॐ ऽ । ॥'.split(' '),
+
+            // Zero-width joiner. This is used to separate a consonant cluster
+            // and avoid a complex ligature.
+            zwj: ['\u200D'],
+
+            // Dummy consonant. This is used in ITRANS to prevert certain types
+            // of parser ambiguity. Thus "barau" -> बरौ but "bara_u" -> बरउ.
+            skip: [''],
+
+            // Vedic accent. Udatta and anudatta.
+            accent: ['\u0951', '\u0952'],
+
+            // Accent combined with anusvara and and visarga. For compatibility
+            // with ITRANS, which allows the reverse of these four.
+            combo_accent: 'ः॑ ः॒ ं॑ ं॒'.split(' '),
+
+            candra: ['ॅ'],
+
+            // Non-Sanskrit consonants
+            other: 'क़ ख़ ग़ ज़ ड़ ढ़ फ़ य़ ऱ'.split(' ')
+        },
+
         /* Gujarati
          * --------
          * Sanskrit-complete.

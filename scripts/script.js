@@ -56,9 +56,9 @@ function generateTranslitMap(toScript) {
 
   var translitMap = document.getElementById("translitMap");
 
-  var devanagariMap = [Sanscript.schemes.devanagari.vowels,
+  var devanagariMap = [Sanscript.schemes.devanagariUC.vowels,
     Sanscript.schemes.itrans.vowels,
-    Sanscript.schemes.devanagari.consonants,
+    Sanscript.schemes.devanagariUC.consonants,
     Sanscript.schemes.itrans.consonants
   ];
 
@@ -68,25 +68,37 @@ function generateTranslitMap(toScript) {
     Sanscript.schemes.itrans.consonants
   ];
 
+  var iastMap = [Sanscript.schemes.iast.vowels,
+    Sanscript.schemes.itrans.vowels,
+    Sanscript.schemes.iast.consonants,
+    Sanscript.schemes.itrans.consonants
+  ];
+
+
+
   switch (toScript) {
+    case "devanagariUC":
+
+      translitMap.innerHTML = genTable(devanagariMap);
+      break;
+
     case "tamil":
 
       translitMap.innerHTML = genTable(tamilMap);
       break;
 
-    case "devanagari":
+    case "iast":
 
-      translitMap.innerHTML = genTable(devanagariMap);
+      translitMap.innerHTML = genTable(iastMap);
       break;
 
     case "select":
-      translitMap.innerText = "Please select a Script";
+      translitMap.innerHTML = "<center><h1>Please select a Script</h1></center>";
       break;
 
     default:
-      translitMap.innerText = "Please select a Script";
-
-  }
+      translitMap.innerHTML = "<center><h1>Please select a Script</h1></center>";
+}
 }
 
 function genTable(dataArray) {
