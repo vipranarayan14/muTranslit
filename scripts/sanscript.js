@@ -107,19 +107,19 @@
             // "Dependent" forms of the vowels. These are used whenever the
             // vowel immediately follows a consonant. If a letter is not
             // listed in `vowels`, it should not be listed here.
-            vowel_marks: 'ा ि ी ु ू ृ ॄ ॢ ॣ ॆ े ै ॊ ो ौ'.split(' '),
+            vowel_marks: '\u093E \u093F \u0940 \u0941 \u0942 \u0943 \u0944 \u0962 \u0963 \u0946 \u0947 \u0948 \u094A \u094B \u094C'.split(' '),
 
             // Miscellaneous marks, all of which are used in Sanskrit.
-            other_marks: 'ं ः ँ'.split(' '),
+            other_marks: '\u0902 \u0903 \u0901'.split(' '),
 
             // In syllabic scripts like Devanagari, consonants have an inherent
             // vowel that must be suppressed explicitly. We do so by putting a
             // virama after the consonant.
-            virama: ['्'],
+            virama: ['\u094D'],
 
             // Various Sanskrit consonants and consonant clusters. Every token
             // here has an explicit vowel. Thus "क" is "ka" instead of "k".
-            consonants: 'क ख ग घ ङ च छ ज झ ञ ट ठ ड ढ ण त थ द ध न प फ ब भ म य र ल व श ष स ह ळ क्ष ज्ञ'.split(' '),
+            consonants: '\u0915 \u0916 \u0917 \u0918 \u0919 \u091A \u091B \u091C \u091D \u091E \u091F \u0920 \u0921 \u0922 \u0923 \u0924 \u0925 \u0926 \u0927 \u0928 \u092A \u092B \u092C \u092D \u092E \u092F \u0930 \u0932 \u0935 \u0936 \u0937 \u0938 \u0939 \u0933 \u0915\u094D\u0937 \u091C\u094D\u091E'.split(' '),
 
             // Numbers and punctuation
             symbols: '० १ २ ३ ४ ५ ६ ७ ८ ९ ॐ ऽ । ॥'.split(' '),
