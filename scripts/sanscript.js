@@ -31,20 +31,6 @@
      */
     var schemes = Sanscript.schemes = {
 
-        /* Bengali
-         * -------
-         * 'va' and 'ba' are both rendered as ব.
-         */
-        bengali: {
-            vowels: 'অ আ ই ঈ উ ঊ ঋ ৠ ঌ ৡ  এ ঐ  ও ঔ'.split(' '),
-            vowel_marks: 'া ি ী ু ূ ৃ ৄ ৢ ৣ  ে ৈ  ো ৌ'.split(' '),
-            other_marks: 'ং ঃ ঁ'.split(' '),
-            virama: ['্'],
-            consonants: 'ক খ গ ঘ ঙ চ ছ জ ঝ ঞ ট ঠ ড ঢ ণ ত থ দ ধ ন প ফ ব ভ ম য র ল ব শ ষ স হ ळ ক্ষ জ্ঞ'.split(' '),
-            symbols: '০ ১ ২ ৩ ৪ ৫ ৬ ৭ ৮ ৯ ॐ ঽ । ॥'.split(' '),
-            other: '    ড ঢ  য '.split(' ')
-        },
-
         /* Devanagari
          * ----------
          * The most comprehensive and unambiguous Brahmic script listed.
@@ -100,14 +86,19 @@
          * The most comprehensive and unambiguous Brahmic script listed.
          */
         devanagariUC: {
+
             // "Independent" forms of the vowels. These are used whenever the
             // vowel does not immediately follow a consonant.
-            vowels: '\u0905 \u0906 \u0907 \u0908 \u0909 \u090A \u090B \u0960 \u090C \u0961 \u090E \u090F \u0910 \u0912 \u0913 \u0914'.split(' '),
+            vowels: ('\u0905 \u0906 \u0907 \u0908 \u0909 \u090A' +
+                     '\u090B \u0960 \u090C \u0961 \u090E \u090F' +
+                     '\u0910 \u0912 \u0913 \u0914').split(' '),
 
             // "Dependent" forms of the vowels. These are used whenever the
             // vowel immediately follows a consonant. If a letter is not
             // listed in `vowels`, it should not be listed here.
-            vowel_marks: '\u093E \u093F \u0940 \u0941 \u0942 \u0943 \u0944 \u0962 \u0963 \u0946 \u0947 \u0948 \u094A \u094B \u094C'.split(' '),
+            vowel_marks: ('\u093E \u093F \u0940 \u0941 \u0942' +
+                          '\u0943 \u0944 \u0962 \u0963 \u0946' +
+                          '\u0947 \u0948 \u094A \u094B \u094C').split(' '),
 
             // Miscellaneous marks, all of which are used in Sanskrit.
             other_marks: '\u0902 \u0903 \u0901'.split(' '),
@@ -119,10 +110,19 @@
 
             // Various Sanskrit consonants and consonant clusters. Every token
             // here has an explicit vowel. Thus "क" is "ka" instead of "k".
-            consonants: '\u0915 \u0916 \u0917 \u0918 \u0919 \u091A \u091B \u091C \u091D \u091E \u091F \u0920 \u0921 \u0922 \u0923 \u0924 \u0925 \u0926 \u0927 \u0928 \u092A \u092B \u092C \u092D \u092E \u092F \u0930 \u0932 \u0935 \u0936 \u0937 \u0938 \u0939 \u0933 \u0915\u094D\u0937 \u091C\u094D\u091E'.split(' '),
+            consonants: ('\u0915 \u0916 \u0917 \u0918 \u0919' +
+                         '\u091A \u091B \u091C \u091D \u091E' +
+                         '\u091F \u0920 \u0921 \u0922 \u0923' +
+                         '\u0924 \u0925 \u0926 \u0927 \u0928' +
+                         '\u092A \u092B \u092C \u092D \u092E' +
+                         '\u092F \u0930 \u0932 \u0935 \u0936' +
+                         '\u0937 \u0938 \u0939' +
+                         '\u0933 \u0915\u094D\u0937 \u091C\u094D\u091E').split(' '),
 
             // Numbers and punctuation
-            symbols: '० १ २ ३ ४ ५ ६ ७ ८ ९ ॐ ऽ । ॥'.split(' '),
+            symbols: ('\u0966 \u0967 \u0968 \u0969 \u096A' +
+                      '\u096B \u096C \u096D \u096E \u096F' +
+                      '\u0950 \u093D \u0964 \u0965').split(' '),
 
             // Zero-width joiner. This is used to separate a consonant cluster
             // and avoid a complex ligature.
@@ -137,82 +137,12 @@
 
             // Accent combined with anusvara and and visarga. For compatibility
             // with ITRANS, which allows the reverse of these four.
-            combo_accent: 'ः॑ ः॒ ं॑ ं॒'.split(' '),
+            combo_accent: '\u0903\u0951 \u0903\u0952 \u0902\u0951 \u0902\u0952'.split(' '),
 
-            candra: ['ॅ'],
+            candra: ['\u0945'],
 
             // Non-Sanskrit consonants
-            other: 'क़ ख़ ग़ ज़ ड़ ढ़ फ़ य़ ऱ'.split(' ')
-        },
-
-        /* Gujarati
-         * --------
-         * Sanskrit-complete.
-         */
-        gujarati: {
-            vowels: 'અ આ ઇ ઈ ઉ ઊ ઋ ૠ ઌ ૡ  એ ઐ  ઓ ઔ'.split(' '),
-            vowel_marks: 'ા િ ી ુ ૂ ૃ ૄ ૢ ૣ  ે ૈ  ો ૌ'.split(' '),
-            other_marks: 'ં ઃ ઁ'.split(' '),
-            virama: ['્'],
-            consonants: 'ક ખ ગ ઘ ઙ ચ છ જ ઝ ઞ ટ ઠ ડ ઢ ણ ત થ દ ધ ન પ ફ બ ભ મ ય ર લ વ શ ષ સ હ ળ ક્ષ જ્ઞ'.split(' '),
-            symbols: '૦ ૧ ૨ ૩ ૪ ૫ ૬ ૭ ૮ ૯ ૐ ઽ ૤ ૥'.split(' '),
-            candra: ['ૅ']
-        },
-
-        /* Gurmukhi
-         * --------
-         * Missing R/RR/lR/lRR
-         */
-        gurmukhi: {
-            vowels: 'ਅ ਆ ਇ ਈ ਉ ਊ      ਏ ਐ  ਓ ਔ'.split(' '),
-            vowel_marks: 'ਾ ਿ ੀ ੁ ੂ      ੇ ੈ  ੋ ੌ'.split(' '),
-            other_marks: 'ਂ ਃ ਁ'.split(' '),
-            virama: ['੍'],
-            consonants: 'ਕ ਖ ਗ ਘ ਙ ਚ ਛ ਜ ਝ ਞ ਟ ਠ ਡ ਢ ਣ ਤ ਥ ਦ ਧ ਨ ਪ ਫ ਬ ਭ ਮ ਯ ਰ ਲ ਵ ਸ਼ ਸ਼ ਸ ਹ ਲ਼ ਕ੍ਸ਼ ਜ੍ਞ'.split(' '),
-            symbols: '੦ ੧ ੨ ੩ ੪ ੫ ੬ ੭ ੮ ੯ ॐ ऽ । ॥'.split(' '),
-            other: ' ਖ ਗ ਜ ਡ  ਫ  '.split(' ')
-        },
-
-        /* Kannada
-         * -------
-         * Sanskrit-complete.
-         */
-        kannada: {
-            vowels: 'ಅ ಆ ಇ ಈ ಉ ಊ ಋ ೠ ಌ ೡ ಎ ಏ ಐ ಒ ಓ ಔ'.split(' '),
-            vowel_marks: 'ಾ ಿ ೀ ು ೂ ೃ ೄ ೢ ೣ ೆ ೇ ೈ ೊ ೋ ೌ'.split(' '),
-            other_marks: 'ಂ ಃ ँ'.split(' '),
-            virama: ['್'],
-            consonants: 'ಕ ಖ ಗ ಘ ಙ ಚ ಛ ಜ ಝ ಞ ಟ ಠ ಡ ಢ ಣ ತ ಥ ದ ಧ ನ ಪ ಫ ಬ ಭ ಮ ಯ ರ ಲ ವ ಶ ಷ ಸ ಹ ಳ ಕ್ಷ ಜ್ಞ'.split(' '),
-            symbols: '೦ ೧ ೨ ೩ ೪ ೫ ೬ ೭ ೮ ೯ ಓಂ ಽ । ॥'.split(' '),
-            other: '      ಫ  ಱ'.split(' ')
-        },
-
-        /* Malayalam
-         * ---------
-         * Sanskrit-complete.
-         */
-        malayalam: {
-            vowels: 'അ ആ ഇ ഈ ഉ ഊ ഋ ൠ ഌ ൡ എ ഏ ഐ ഒ ഓ ഔ'.split(' '),
-            vowel_marks: 'ാ ി ീ ു ൂ ൃ ൄ ൢ ൣ െ േ ൈ ൊ ോ ൌ'.split(' '),
-            other_marks: 'ം ഃ ँ'.split(' '),
-            virama: ['്'],
-            consonants: 'ക ഖ ഗ ഘ ങ ച ഛ ജ ഝ ഞ ട ഠ ഡ ഢ ണ ത ഥ ദ ധ ന പ ഫ ബ ഭ മ യ ര ല വ ശ ഷ സ ഹ ള ക്ഷ ജ്ഞ'.split(' '),
-            symbols: '൦ ൧ ൨ ൩ ൪ ൫ ൬ ൭ ൮ ൯ ഓം ഽ । ॥'.split(' '),
-            other: '        റ'.split(' ')
-        },
-
-        /* Oriya
-         * -----
-         * Sanskrit-complete.
-         */
-        oriya: {
-            vowels: 'ଅ ଆ ଇ ଈ ଉ ଊ ଋ ୠ ଌ ୡ  ଏ ଐ  ଓ ଔ'.split(' '),
-            vowel_marks: 'ା ି ୀ ୁ ୂ ୃ ୄ ୢ ୣ  େ ୈ  ୋ ୌ'.split(' '),
-            other_marks: 'ଂ ଃ ଁ'.split(' '),
-            virama: ['୍'],
-            consonants: 'କ ଖ ଗ ଘ ଙ ଚ ଛ ଜ ଝ ଞ ଟ ଠ ଡ ଢ ଣ ତ ଥ ଦ ଧ ନ ପ ଫ ବ ଭ ମ ଯ ର ଲ ଵ ଶ ଷ ସ ହ ଳ କ୍ଷ ଜ୍ଞ'.split(' '),
-            symbols: '୦ ୧ ୨ ୩ ୪ ୫ ୬ ୭ ୮ ୯ ଓଂ ଽ । ॥'.split(' '),
-            other: '    ଡ ଢ  ଯ '.split(' ')
+            other: '\u0958 \u0959 \u095A \u095B \u095C \u095D \u095E \u095F \u0931'.split(' ')
         },
 
         /* Tamil
@@ -228,20 +158,6 @@
             consonants: 'க க க க ங ச ச ஜ ச ஞ ட ட ட ட ண த த த த ந ப ப ப ப ம ய ர ல வ ஶ ஷ ஸ ஹ ள க்ஷ ஜ்ஞ ன ழ'.split(' '),
             symbols: '௦ ௧ ௨ ௩ ௪ ௫ ௬ ௭ ௮ ௯ ௐ ऽ । ॥'.split(' '),
             other: '        ற'.split(' ')
-        },
-
-        /* Telugu
-         * ------
-         * Sanskrit-complete.
-         */
-        telugu: {
-            vowels: 'అ ఆ ఇ ఈ ఉ ఊ ఋ ౠ ఌ ౡ ఎ ఏ ఐ ఒ ఓ ఔ'.split(' '),
-            vowel_marks: 'ా ి ీ ు ూ ృ ౄ ౢ ౣ ె ే ై ొ ో ౌ'.split(' '),
-            other_marks: 'ం ః ఁ'.split(' '),
-            virama: ['్'],
-            consonants: 'క ఖ గ ఘ ఙ చ ఛ జ ఝ ఞ ట ఠ డ ఢ ణ త థ ద ధ న ప ఫ బ భ మ య ర ల వ శ ష స హ ళ క్ష జ్ఞ'.split(' '),
-            symbols: '౦ ౧ ౨ ౩ ౪ ౫ ౬ ౭ ౮ ౯ ఓం ఽ । ॥'.split(' '),
-            other: '        ఱ'.split(' ')
         },
 
         /* International Alphabet of Sanskrit Transliteration
@@ -278,62 +194,6 @@
             other: 'q K G z .D .Dh f Y R'.split(' ')
         },
 
-        /* Harvard-Kyoto
-         * -------------
-         * A simple 1:1 mapping.
-         */
-        hk: {
-            vowels: 'a A i I u U R RR lR lRR  e ai  o au'.split(' '),
-            other_marks: 'M H ~'.split(' '),
-            virama: [''],
-            consonants: 'k kh g gh G c ch j jh J T Th D Dh N t th d dh n p ph b bh m y r l v z S s h L kS jJ'.split(' '),
-            symbols: "0 1 2 3 4 5 6 7 8 9 OM ' | ||".split(' ')
-        },
-
-        /* National Library at Kolkata
-         * ---------------------------
-         * Apart from using "ē" and "ō" instead of "e" and "o", this scheme is
-         * identical to IAST. ṝ, ḷ, and ḹ are not part of the scheme proper.
-         *
-         * This is defined further below.
-         */
-
-        /* Sanskrit Library Phonetic Basic
-         * -------------------------------
-         * With one ASCII letter per phoneme, this is the tersest transliteration
-         * scheme in use today and is especially suited to computer processing.
-         */
-        slp1: {
-            vowels: 'a A i I u U f F x X  e E  o O'.split(' '),
-            other_marks: 'M H ~'.split(' '),
-            virama: [''],
-            consonants: 'k K g G N c C j J Y w W q Q R t T d D n p P b B m y r l v S z s h L kz jY'.split(' '),
-            symbols: "0 1 2 3 4 5 6 7 8 9 oM ' . ..".split(' ')
-        },
-
-        /* Velthuis
-         * --------
-         * A case-insensitive Sanskrit encoding.
-         */
-        velthuis: {
-            vowels: 'a aa i ii u uu .r .rr .li .ll  e ai  o au'.split(' '),
-            other_marks: '.m .h '.split(' '),
-            virama: [''],
-            consonants: 'k kh g gh "n c ch j jh ~n .t .th .d .d .n t th d dh n p ph b bh m y r l v ~s .s s h L k.s j~n'.split(' '),
-            symbols: "0 1 2 3 4 5 6 7 8 9 o.m ' | ||".split(' ')
-        },
-
-        /* WX
-         * --
-         * As terse as SLP1.
-         */
-        wx: {
-            vowels: 'a A i I u U q Q L   e E  o O'.split(' '),
-            other_marks: 'M H z'.split(' '),
-            virama: [''],
-            consonants: 'k K g G f c C j J F t T d D N w W x X n p P b B m y r l v S R s h  kR jF'.split(' '),
-            symbols: "0 1 2 3 4 5 6 7 8 9 oM ' | ||".split(' ')
-        }
     },
 
     // Set of names of schemes
@@ -442,9 +302,9 @@
     // Set up various schemes
     (function() {
         // Set up roman schemes
-        var kolkata = schemes.kolkata = cheapCopy(schemes.iast),
-            schemeNames = 'iast itrans hk kolkata slp1 velthuis wx'.split(' ');
-        kolkata.vowels = 'a ā i ī u ū ṛ ṝ ḷ ḹ e ē ai o ō au'.split(' ');
+        //var kolkata = schemes.kolkata = cheapCopy(schemes.iast);
+          var  schemeNames = 'iast itrans'.split(' ');
+        //kolkata.vowels = 'a ā i ī u ū ṛ ṝ ḷ ḹ e ē ai o ō au'.split(' ');
 
         // These schemes already belong to Sanscript.schemes. But by adding
         // them again with `addRomanScheme`, we automatically build up
