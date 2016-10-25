@@ -139,6 +139,6 @@ textarea.textIn , textarea.textOut{
 { border: solid thin;}
 
 .translitMap table td {
-  vertical-align: center;
+  vertical-align: middle;
   text-align: center;
 }
