@@ -1,0 +1,30 @@
+h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 2.5em;
+}
+
+.menu img {
+  height: 220px;
+  width: 400px;
+  border: 5px solid black;
+}
+
+.menucontainer {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  margin-top: 8%;
+}
+
+.menulabel {
+  font-size: 2em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

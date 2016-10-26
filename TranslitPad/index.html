@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>TranslitPad</title>
+  <link rel="stylesheet" href="../commons/styles/styles.css" charset="utf-8">
+  <link rel="stylesheet" href="../commons/styles/fonts.css" charset="utf-8">
+  <style media="screen">
+    .textIn {
+      width: 100%;
+      background-color: white;
+    }
+
+    section.controllers nav {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Transliterater :: TranslitPad</h1>
+  </header>
+
+  <main>
+    <section class="controllers">
+      <nav class="toolBar">
+        <div class="tool optScript">
+          <form name="scriptSelector" id="optScriptGroup">
+            <label for="devanagari">Devanagari</label>
+            <input type="radio" name="script" id="devanagari" value="devanagariUC" checked="true" accesskey="z">
+
+            <label for="tamil">Tamil</label>
+            <input type="radio" name="script" id="tamil" value="tamil" accesskey="x">
+          </form>
+        </div>
+      </nav>
+    </section>
+
+    <section class="processors">
+      <div id="textIn" class="textIn" placeholder="Type something in Itrans" contenteditable="true"></div>
+    </section>
+
+    <section id="translitMap" class="translitMap">
+    </section>
+
+  </main>
+
+
+  <script src="../commons/scripts/sanscript.js" charset="utf-8"></script>
+  <script src="../commons/scripts/translit-map.js"></script>
+  <script src="scripts/script.js" charset="utf-8"></script>
+</body>
+
+</html>

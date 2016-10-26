@@ -54,7 +54,7 @@ section.controllers nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 100%;
+  width: 50%;
   height: 40px;
   background: #FFD180;
   margin: 5px;
@@ -69,7 +69,7 @@ nav .tool {
 
 .optScript {
   position: relative;
-  left: 50%;
+  left: 10px;
 }
 .select-style {
     padding: 0;
@@ -107,7 +107,7 @@ section.processors {
   margin-top: 5px;
 }
 
-textarea.textIn , textarea.textOut{
+.textIn , textarea.textOut{
   height: 100%;
   width: 95%;
   margin: 5px;

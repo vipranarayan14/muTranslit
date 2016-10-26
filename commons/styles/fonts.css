@@ -1,0 +1,16 @@
+/*Sanskrit*/
+@import url('https://fonts.googleapis.com/css?family=Vesper+Libre');
+
+/*Tamil*/
+@import url('https://fonts.googleapis.com/css?family=Arima+Madurai:400,700&subset=tamil');
+
+
+span:lang(sa), .content {
+		font-family: 'Vesper Libre', serif;
+}
+
+span:lang(ta) {
+		font-family: 'Arima Madurai', cursive;
+		font-size: 12px;
+		font-weight: bold;
+}
