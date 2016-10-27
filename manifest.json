@@ -1,0 +1,13 @@
+{
+  "name": "Transliterater",
+  "description": "The Transliterater transliterates Itrans to Devanagari or Tamil scripts",
+  "version": "1.0",
+  "manifest_version": 2,
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "icons": { "16": "commons/rsrcs/transliterater-16.png", "128": "commons/rsrcs/transliterater-128.png" },
+  "permissions" : ["webview"]
+}
