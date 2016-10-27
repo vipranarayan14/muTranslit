@@ -160,6 +160,32 @@
             other: '        ற'.split(' ')
         },
 
+        /* Tamil Unicode
+         * -----
+         * Missing R/RR/lR/lRR vowel marks and voice/aspiration distinctions.
+         * The most incomplete of the Sanskrit schemes here.
+         */
+        tamilUC: {
+            vowels: ('\u0B85 \u0B86 \u0B87 \u0B88 \u0B89 \u0B8A ' +
+                     '    \u0B8E \u0B8F \u0B90 \u0B92 \u0B93 \u0B94').split(' '),
+            vowel_marks: ('\u0BBE \u0BBF \u0BC0 \u0BC1 \u0BC2 '+
+                          '     \u0BC6 \u0BC7 \u0BC8 \u0BCA \u0BCB \u0BCC').split(' '),
+            other_marks: ('\u0B82 \u0BC3 ').split(' '),
+            virama: ['\u0BCD'],
+            consonants: ('\u0B95 \u0B95 \u0B95 \u0B95 \u0B99 ' +
+                         '\u0B9A \u0B9A \u0B9C \u0B9A \u0B9E ' +
+                         '\u0B9F \u0B9F \u0B9F \u0B9F \u0BA3 ' +
+                         '\u0BA4 \u0BA4 \u0BA4 \u0BA4 \u0BA8 ' +
+                         '\u0BAA \u0BAA \u0BAA \u0BAA \u0BAE ' +
+                         '\u0BAF \u0BB0 \u0BB2 \u0BB5 \u0BB6 ' +
+                         '\u0BB7 \u0BB8 \u0BB9 \u0BB3 ' +
+                         '\u0B95\u0BCD\u0BB7 \u0B9C\u0BCD\u0B9E \u0BA9 \u0BB4').split(' '),
+            symbols: ('\u0BE6 \u0BE7 \u0BE8 \u0BE9 \u0BEA ' +
+                      '\u0BEB \u0BEC \u0BED \u0BEE \u0BEF ' +
+                      '\u0BD0 \u093D \u0964 \u0965').split(' '),
+            other: ('        \u0BB1').split(' ')
+        },
+
         /* International Alphabet of Sanskrit Transliteration
          * --------------------------------------------------
          * The most "professional" Sanskrit romanization scheme.

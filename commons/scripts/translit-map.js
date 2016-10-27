@@ -12,9 +12,9 @@ function genMap(toScript) {
       Sanscript.schemes.itrans.consonants
     ],
 
-    tamil: [Sanscript.schemes.tamil.vowels,
+    tamil: [Sanscript.schemes.tamilUC.vowels,
       Sanscript.schemes.itrans.vowels,
-      Sanscript.schemes.tamil.consonants,
+      Sanscript.schemes.tamilUC.consonants,
       Sanscript.schemes.itrans.consonants
     ],
 
@@ -26,7 +26,7 @@ function genMap(toScript) {
   };
 
   return {
-    devanagariuc: genTable(translitMap.devanagari),
+    devanagari: genTable(translitMap.devanagari),
     tamil: genTable(translitMap.tamil),
     iast: genTable(translitMap.iast),
     select: "<center><h1>Please select a Script</h1></center>"
