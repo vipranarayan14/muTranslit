@@ -1,8 +1,14 @@
 /*Sanskrit*/
-@import url('https://fonts.googleapis.com/css?family=Vesper+Libre');
+@font-face {
+    font-family: "Vesper Libre";
+    src: url(../rsrcs/vesper-libre.ttf);
+}
 
 /*Tamil*/
-@import url('https://fonts.googleapis.com/css?family=Arima+Madurai:400,700&subset=tamil');
+@font-face {
+    font-family: "Arima Madurai";
+    src: url(../rsrcs/arima-madurai.ttf);
+}
 
 
 span:lang(sa), .content {
