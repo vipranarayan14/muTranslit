@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>TranslitPad</title>
-  <link rel="stylesheet" href="../commons/styles/styles.css" charset="utf-8">
-  <link rel="stylesheet" href="../commons/styles/fonts.css" charset="utf-8">
+
+  <link rel="stylesheet" href="../commons/styles/styles.css">
+  <link rel="stylesheet" href="../commons/styles/fonts.css">
+
   <style media="screen">
     .textIn {
       width: 100%;
@@ -28,7 +33,7 @@
         <div class="tool optScript">
           <form name="scriptSelector" id="optScriptGroup">
             <label for="devanagari">Devanagari</label>
-            <input type="radio" name="script" id="devanagari" value="devanagari" checked="true" accesskey="z">
+            <input type="radio" name="script" id="devanagari" value="devanagari" checked accesskey="z">
 
             <label for="tamil">Tamil</label>
             <input type="radio" name="script" id="tamil" value="tamil" accesskey="x">
@@ -41,11 +46,8 @@
       <div id="textIn" class="textIn" placeholder="Type something in Itrans" contenteditable="true"></div>
     </section>
 
-    <section id="translitMap" class="translitMap">
-    </section>
-
+    <section id="translitMap" class="translitMap"></section>
   </main>
-
 
   <script src="../commons/scripts/sanscript.js" charset="utf-8"></script>
   <script src="../commons/scripts/translit-map.js"></script>

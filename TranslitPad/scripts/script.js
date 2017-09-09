@@ -22,7 +22,7 @@ tin.addEventListener('keyup', function(e) {
     var span = document.createElement('span');
     if (toScript.value === "devanagari") {
       span.setAttribute('lang', 'sa');
-    }else if (toScript.value === "tamil") {
+    } else if (toScript.value === "tamil") {
       span.setAttribute('lang', 'ta');
     }
     span.innerHTML += Sanscript.t(word, "itrans", toScript.value);

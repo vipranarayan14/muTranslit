@@ -1,44 +1,49 @@
-<html>
-    <head>
-    <title>TranslitBox</title>
-        <link rel="stylesheet" href="../commons/styles/styles.css" media="screen" title="no title" charset="utf-8">
-    </head>
-    <body>
-      <header>
-        <h1>Transliterater :: TranslitBox</h1>
-      </header>
+<!DOCTYPE html>
+<html lang="en">
 
-      <main>
-        <section class="controllers">
-        <nav class="toolBar"></nav>
-        <nav class="toolBar">
-          <div class="tool optScript">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TranslitBox</title>
+
+  <link rel="stylesheet" href="../commons/styles/styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Transliterater :: TranslitBox</h1>
+  </header>
+
+  <main>
+    <section class="controllers">
+      <nav class="toolBar"></nav>
+      <nav class="toolBar">
+        <div class="tool optScript">
           <label for="optScript">Output Script</label>
           <div class="select-style">
             <select id="optScript">
-              <option value="select" selected="selected">Select</option>
-              <option value="devanagari">Devanagari</option>
-              <option value="tamil">Tamil</option>
-              <option value="iast">IAST</option>
-            </select>
+          <option value="select" selected="selected">Select</option>
+          <option value="devanagari">Devanagari</option>
+          <option value="tamil">Tamil</option>
+          <option value="iast">IAST</option>
+        </select>
           </div>
         </div>
-        </nav>
-        </section>
+      </nav>
+    </section>
 
-        <section class="processors">
-          <textarea id="textIn" class="textIn" placeholder="Type something in Itrans"></textarea>
-          <textarea id="textOut" class="textOut" placeholder="Output will be here..." readonly="true"></textarea>
-        </section>
+    <section class="processors">
+      <textarea id="textIn" class="textIn" placeholder="Type something in Itrans"></textarea>
+      <textarea id="textOut" class="textOut" placeholder="Output will be here..." readonly></textarea>
+    </section>
 
-        <section id="translitMap" class="translitMap">
-        </section>
+    <section id="translitMap" class="translitMap"></section>
+  </main>
 
-      </main>
+  <script src="../commons/scripts/sanscript.js"></script>
+  <script src="../commons/scripts/translit-map.js"></script>
+  <script src="scripts/script.js"></script>
+</body>
 
-
-      <script src="../commons/scripts/sanscript.js"></script>
-      <script src="../commons/scripts/translit-map.js"></script>
-      <script src="scripts/script.js"></script>
-    </body>
 </html>

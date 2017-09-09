@@ -1,30 +1,33 @@
 /*Sanskrit*/
+
 @font-face {
-    font-family: "Vesper Libre";
-    src: url(../rsrcs/vesper-libre.ttf);
+  font-family: "Vesper Libre";
+  src: url(../rsrcs/vesper-libre.ttf);
 }
 
+
 /*Tamil*/
+
 @font-face {
-    font-family: "Arima Madurai";
-    src: url(../rsrcs/arima-madurai.ttf);
+  font-family: "Arima Madurai";
+  src: url(../rsrcs/arima-madurai.ttf);
 }
 
 * {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
 body {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    background: #FFF3E0;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: #FFF3E0;
 }
 
 header {
@@ -45,7 +48,6 @@ main {
   flex-direction: column;
   width: 90%;
   height: 90%;
-
 }
 
 section.controllers {
@@ -56,6 +58,7 @@ section.controllers {
   height: 40px;
   margin-top: 10px;
 }
+
 section.controllers nav {
   display: flex;
   flex-direction: row;
@@ -77,31 +80,32 @@ nav .tool {
   position: relative;
   left: 10px;
 }
+
 .select-style {
-    padding: 0;
-    margin: 0 10px;
-    border: 1px solid #ccc;
-    width: 120px;
-    border-radius: 5px;
-    overflow: hidden;
-    background-color: #fff;
+  padding: 0;
+  margin: 0 10px;
+  border: 1px solid #ccc;
+  width: 120px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #fff;
 }
 
 .select-style select {
-    padding: 5px 8px;
-    width: 100%;
-    border: none;
-    box-shadow: none;
-    background-color: transparent;
-    background-image: none;
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
-    font-size: 15px;
+  padding: 5px 8px;
+  width: 100%;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  background-image: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: 15px;
 }
 
 .select-style select:focus {
-    outline: none;
+  outline: none;
 }
 
 section.processors {
@@ -113,7 +117,8 @@ section.processors {
   margin-top: 5px;
 }
 
-.textIn , textarea.textOut{
+.textIn,
+textarea.textOut {
   height: 100%;
   width: 95%;
   margin: 5px;
@@ -141,8 +146,9 @@ section.processors {
 
 .translitMap table,
 .translitMap table tr,
-.translitMap table td
-{ border: solid thin;}
+.translitMap table td {
+  border: solid thin;
+}
 
 .translitMap table td {
   vertical-align: middle;
