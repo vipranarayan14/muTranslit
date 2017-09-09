@@ -154,3 +154,7 @@ textarea.textOut {
   vertical-align: middle;
   text-align: center;
 }
+
+.copy-btn {
+  margin-left: 10px;
+}

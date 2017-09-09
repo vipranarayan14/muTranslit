@@ -3,30 +3,28 @@ var textIn = document.getElementById("textIn");
 var textOut = document.getElementById("textOut");
 var translitMapContainer = document.getElementById("translitMap")
 
-textIn.addEventListener("input", function(e) {
+window.addEventListener('load', setTranslitBoxOptions);
+optScript.addEventListener("change", setTranslitBoxOptions);
+textIn.addEventListener("input", getTextOutVal);
 
-  var optScriptVal = optScript.value;
+new Clipboard('.copy-btn');
 
-  textOut.value = transliterate(textIn.value, optScriptVal);
-
-});
-
-optScript.addEventListener("change", function() {
+function setTranslitBoxOptions() {
 
   var optScriptVal = optScript.value;
 
   switchFont(optScriptVal);
 
-  textOut.value = transliterate(textIn.value, optScriptVal);
+  getTextOutVal();
 
   showTranslitMap(optScriptVal, translitMapContainer);
-});
+}
 
 function switchFont(toScript) {
 
   var tamilFont = "font-family: 'Arima Madurai', cursive;" +
-                  "font-size: 14px;" +
-                  "font-weight: bold;";
+    "font-size: 14px;" +
+    "font-weight: bold;";
 
   var devanagariFont = "font-family: 'Vesper Libre', serif;";
 
@@ -50,10 +48,17 @@ function switchFont(toScript) {
 }
 
 function transliterate(inputTxt, toScript) {
+
   if (toScript !== "select") {
 
     return Sanscript.t(inputTxt, "itrans", toScript);
   } else {
+
     return inputTxt;
   }
 }
+function getTextOutVal() {
+
+  textOut.value = transliterate(textIn.value, optScript.value);
+}
+
